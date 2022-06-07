@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            height: 105vh;
+            background: #4e7dbb;
+        }
+        
+        *::before *::after {
+            content: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+        
+        .container::before {
+            top: -100px;
+            left: 50px;
+            background: linear-gradient(#f0f, #f00);
+            clip-path: circle(20% at 25% 30%);
+        }
+        
+        .container::after {
+            top: 100px;
+            left: 50px;
+            background: linear-gradient(#e91e63, #2196f3);
+            clip-path: circle(20% at 70% 65%);
+        }
+        
+        .container .card-wrapper .content p {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: aquamarine;
+        }
+        
+        .container .card-wrapper .content a {
+            display: inline-block;
+            padding: 9px 22px;
+            margin-top: 17px;
+            background: #fff;
+            color: #222;
+            border-radius: 18px;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+            user-select: none;
+        }
+        
+        .container .card-wrapper {
+            position: relative;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            z-index: 1;
+            width: 500px;
+            height: 300px;
+            box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.5);
+            border-left: 2px rgba(255, 255, 255, 0.5);
+            border-top: 2px rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="card-wrapper">
+            <div class="content">
+                <h1> B Y PHENOMENAL</h1>
+                <br>
+                <p>WEB DEVELOPER</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>
